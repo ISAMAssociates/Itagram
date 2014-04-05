@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "name": "Itagram0.1",
+  "description": "App emulando funcionalidad instagram",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "PPS Asociates",
+    "url": "www.google.es"
+  },
+
+  "activities": {
+
+    "camera":{
+      "type": ["photos", "videos"]
+    }
+
+  },
+
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "es",
+  "icons": {
+    "16": "icon16.png",
+    "128": "icon128.png"
+  }
+
+}
