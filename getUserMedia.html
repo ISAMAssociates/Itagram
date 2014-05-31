@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Video</title>
+</head>
+<body>
+	<video autoplay><video>
+
+	<script type="text/javascript">
+
+		navigator.getMedia = ( navigator.getUserMedia ||
+			                   navigator.webkitGetUserMedia ||
+			                   navigator.mozGetUserMedia ||
+			                   navigator.msGetUserMedia);
+		function error(){
+			console.log("ERRORRR!");
+		}
+
+		function callbackVideo(localMediaStream){
+			var video = document.querySelector('video');
+			video.src = window.URL.createObjectURL(localMediaStream);
+
+			video.onloadedmetadata = function(e){
+				//NADA
+			}
+		}
+
+		opts = {video: true, audio: true};
+
+		navigator.getMedia(opts, callbackVideo, error);
+	</script>
+	
+</body>
+</html>
